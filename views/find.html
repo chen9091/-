@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索</title>
+	<script src ="../lib/iscroll.js"></script>
+	<script src="../lib/jquery-2.1.1.js"></script>
+	<script src="../lib/angular.min.js"></script>
+	<script src="../js/controller/find.js"></script>
+	<link rel="stylesheet" href="../css/find.css">
+</head>
+<body ng-app="find_myApp">
+	<div id="find_top">
+		<a href="javascript:history.back()" id="find_reutrn"><span></span></a>
+		<p>全部分类</p>
+	</div>
+
+
+
+	<div id="find_search">
+		<input type="text" placeholder="搜索商品">
+		<a href="find_1.html"><span></span></a>
+	</div>
+
+
+	<div id="find_aside">
+		<ul>
+			<li><a href="">女鞋</a></li>
+			<li><a href="">男装</a></li>
+			<li><a href="">母婴</a></li>
+			<li><a href="">鞋类</a></li>
+			<li><a href="">箱包</a></li>
+			<li><a href="">日用百货</a></li>
+			<li><a href="">家电数码</a></li>
+			<li><a href="">内衣配饰</a></li>
+			<li><a href="">美妆</a></li>
+			<li><a href="">运动户外</a></li>
+			<li><a href="">美食</a></li>
+			<li><a href="">车品文娱</a></li>
+		</ul>
+	</div>
+
+
+	<div ng-controller="mycontrol" id="find_aside_box">
+		<ul>
+			<li ng-repeat="x in data">
+				<div>
+					<img ng-src='{{ x.pic_url }}'  alt="">
+					<p>{{ x.title }}</p>
+				</div>
+				
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
